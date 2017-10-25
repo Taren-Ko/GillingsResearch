@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!-- This prototype was made by Cameron Ross McCullers for use by Gillings Research.
 This utilizes the materialize framework. -->
-<html>
+<html lang="en-US">
   <head>
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
       <link rel="icon" href="photos/well.jpg">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -14,7 +14,8 @@ This utilizes the materialize framework. -->
   <body>
     <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
       <script src="js/init.js"></script>
 
       <nav class="nav-extended blue lighten-2">
@@ -23,10 +24,10 @@ This utilizes the materialize framework. -->
           <img class="brand-logo" src="photos/logo.png">
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">NONFUNCTIONING PROTOTYPE</a></li>
+            <li><a href="https://sph.unc.edu/research/research/">Back to Gillings</a></li>
           </ul>
           <ul class="side-nav" id="mobile-demo">
-            <li><a href="#">NONFUNCTIONING PROTOTYPE</a></li>
+            <li><a href="https://sph.unc.edu/research/research/">Back to Gillings</a></li>
           </ul>
           <!-- </div> -->
         </div>
@@ -48,7 +49,7 @@ This utilizes the materialize framework. -->
       <div class="row">
         <div class="container">
 
-          <div class="col s12 m3">
+          <div class="col s12 m4">
             <div class="card grey lighten-2">
               <div class="card-image">
                 <img src="photos/header-mask.png">
@@ -69,13 +70,13 @@ This utilizes the materialize framework. -->
             <div class="card grey lighten-2" >
               <div class="card-content black-text" id="helpLinks">
                 <ul class="collection">
-                  <li class="collection-item">Research and Innovation</li>
-                  <li class="collection-item">Resources for Gillings Researchers</li>
-                  <li class="collection-item">Gillings Project Maps</li>
-                  <li class="collection-item">Innovation and Entrepreneurship</li>
-                  <li class="collection-item">Explore our Research</li>
-                  <li class="collection-item">Gillings Innovation Labs</li>
-                  <li class="collection-item">Gillings School Strategic Themes</li>
+                  <li class="collection-item"><a href="https://sph.unc.edu/research/research/">Research and Innovation</a></li>
+                  <li class="collection-item"><a href="https://sph.unc.edu/research/guide/">Resources for Gillings Researchers</a></li>
+                  <li class="collection-item"><a href="https://sph.unc.edu/research/maps/">Gillings Project Maps</a></li>
+                  <li class="collection-item"><a href="https://sph.unc.edu/research/innovation/">Innovation and Entrepreneurship</a></li>
+                  <li class="collection-item"><a href="https://sph.unc.edu/research/explore/">Explore our Research</a></li>
+                  <li class="collection-item"><a href="https://sph.unc.edu/research/gil/">Gillings Innovation Labs</a></li>
+                  <li class="collection-item"><a href="https://sph.unc.edu/research/explore-landing/strategic-themes/">Gillings School Strategic Themes</a></li>
                 </ul>
               </div>
             </div>
@@ -93,12 +94,12 @@ This utilizes the materialize framework. -->
 
 
 
-        <div class="col s12 m9">
+        <div class="col s12 m8">
           <!-- <div class="card white"> -->
             <!-- <div class="card-content black-text"> -->
-              <h3>Gillings Research Search</h3>
+              <h3>Gillings Publication Search</h3>
               <div class="input-field">
-                <input id="search" type="text" class="validate">
+                <input id="quickSearch" type="text" class="validate">
                 <label for="search">Enter Search Query</label>
               </div>
               <ul class="collapsible" data-collapsible="accordion">
@@ -108,27 +109,72 @@ This utilizes the materialize framework. -->
                     Additional Search Options
                   </div>
                   <div class="collapsible-body">
-                    <div class="input-field">
-                      <input id="search" type="text" class="validate">
-                      <label for="search">Authors</label>
+
+                  <div class="row">
+                    <div class="col s12 m10">
+                      <div class="input-field">
+                        <input id="authors" type="text" class="validate">
+                        <label for="search">Authors</label>
+                      </div>
                     </div>
-                    <div class="input-field">
-                      <input id="search" type="text" class="validate">
-                      <label for="search">Keywords</label>
+                    <div class="input-field col s12 m2">
+                      <select>
+                        <option value="1" selected>OR</option>
+                        <option value="2">AND</option>
+                      </select>
+                        <label>Type</lable>
                     </div>
-                    <div class="input-field">
-                      <input id="search" type="text" class="validate">
-                      <label for="search">Title</label>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col s12 m10">
+                      <div class="input-field">
+                        <input id="abstract" type="text" class="validate">
+                        <label for="search">Abstract</label>
+                      </div>
                     </div>
-                    <div class="input-field">
-                      <input id="search" type="text" class="validate">
-                      <label for="search">Abstract</label>
+                    <div class="input-field col s12 m2">
+                      <select>
+                        <option value="1" selected>OR</option>
+                        <option value="2">AND</option>
+                      </select>
+                      <label>Type</lable>
                     </div>
+                  </div>
+                    <div class="row">
+                    <div class="col s12 m10">
+                      <div class="input-field">
+                        <input id="keywords" type="text" class="validate">
+                        <label for="search">Keywords</label>
+                      </div>
+                    </div>
+                    <div class="input-field col s12 m2">
+                      <select>
+                        <option value="1" selected>OR</option>
+                        <option value="2">AND</option>
+                      </select>
+                      <label>Type</lable>
+                    </div>
+                  </div>
+
+                    <div class="row">
+                    <div class="col s12 m10">
+                      <div class="input-field">
+                        <input id="title" type="text" class="validate">
+                        <label for="search">Title</label>
+                      </div>
+                    </div>
+                    <div class="input-field col s12 m2"></div>
+                  </div>
+
                   </div>
                 </li>
               </ul>
               <div class="row">
-                <a class="waves-effect waves-light btn right" type="submit" name="action"><i class="material-icons right">search</i>Start Search</a>
+                <a class="waves-effect waves-light btn right" type="submit"
+                   name="action" href="#!" onclick="visitSearchPage();"><i
+                        class="material-icons right">search</i>Start Search</a>
               </div>
             <!-- </div> -->
           <!-- </div> -->
@@ -146,13 +192,12 @@ This utilizes the materialize framework. -->
           <div class="divider"></div>
           <div class="section">
             <h4>Here's some popular topics people research!</h4>
-            <img class="center-align" src="photos/word-cloud-example.png">
+            <img class="center-align" src="photos/word-cloud-example.png" width="100%">
           </div>
 
           <div class="divider"></div>
           <div class="section container">
-            <iframe class="center-align" src="https://www.google.com/maps/d/embed?mid=1kit00adv-UqEkwrJnn_SgW78rjM" width="640" height="480"></iframe>
-            <iframe class="center-align" src="https://www.google.com/maps/d/embed?mid=1sAMDMNXcJgfTzaWRgShoepSeSt4" width="640" height="480"></iframe>
+            <iframe class="center-align" src="https://www.google.com/maps/d/embed?mid=1kit00adv-UqEkwrJnn_SgW78rjM" width="100%" height="300"></iframe>
           </div>
 
         </div>
@@ -168,18 +213,18 @@ This utilizes the materialize framework. -->
         <div class="row">
           <div class="col l4 offset-l2 s12">
             <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">School Leadership</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Maps and Directions</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Life in Chapel Hill</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Diversity and Inclusion</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/resource-pages/our-people-cau/">School Leadership</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/resource-pages/map-and-directions/">Maps and Directions</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/students/life-in-chapel-hill/">Life in Chapel Hill</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/resource-pages/diversity/">Diversity and Inclusion</a></li>
             </ul>
           </div>
           <div class="col l4 offset-l2 s12">
             <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Centers, Institutes, and Affiliates</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Culture of Health</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Online Courses</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Emergency Information</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/resource-pages/centers-institutes/">Centers, Institutes, and Affiliates</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/nciph/culture-of-health/">Culture of Health</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/resource-pages/online-programs/">Online Courses</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/emergency-information/">Emergency Information</a></li>
             </ul>
           </div>
         </div>
@@ -187,7 +232,7 @@ This utilizes the materialize framework. -->
       <div class="footer-copyright">
         <div class="row">
           <div class="col l8 s12">
-            <p>UNC GILLINGS SCHOOL OF GLOBAL PUBLIC HEALTH | CONTACT</p>
+            <p>UNC GILLINGS SCHOOL OF GLOBAL PUBLIC HEALTH | <a href="https://sph.unc.edu/feedback">CONTACT</a></p>
             <p>170 ROSENAU HALL, CB #7400 | 135 DAUER DRIVE | CHAPEL HILL, NC 27599‑7400</p>
           </div>
           <div class="col l4 s12">
@@ -199,3 +244,4 @@ This utilizes the materialize framework. -->
 
   </body>
 </html>
+
