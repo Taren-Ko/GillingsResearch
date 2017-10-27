@@ -3,7 +3,7 @@
 This utilizes the materialize framework. -->
 <html lang="en-US">
   <head>
-      <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
       <link rel="icon" href="photos/well.jpg">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -18,20 +18,22 @@ This utilizes the materialize framework. -->
     <script type="text/javascript" src="js/search.js"></script>
       <script src="js/init.js"></script>
 
-      <nav class="nav-extended blue lighten-2">
+      <nav id="carolina">
         <div class="nav-wrapper">
           <!-- <div class="container"> -->
-          <img class="brand-logo" src="photos/logo.png">
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <a href="https://sph.unc.edu/research/research/">
+            <img class="brand-logo" src="photos/logo.png" height="60px">
+          </a>
+          <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="https://sph.unc.edu/research/research/">Back to Gillings</a></li>
           </ul>
-          <ul class="side-nav" id="mobile-demo">
+          <!-- <ul class="side-nav" id="mobile-demo">
             <li><a href="https://sph.unc.edu/research/research/">Back to Gillings</a></li>
-          </ul>
+          </ul> -->
           <!-- </div> -->
         </div>
-        <div class="nav-content">
+        <!-- <div class="nav-content">
           <ul class="tabs tabs-transparent">
             <li class="tab"><a href="#test1">Students</a></li>
             <li class="tab"><a href="#test2">Departments</a></li>
@@ -39,7 +41,7 @@ This utilizes the materialize framework. -->
             <li class="tab"><a href="#test4">Give</a></li>
             <li class="tab"><a class="active" href="#">GRS</a></li>
           </ul>
-        </div>
+        </div> -->
       </nav>
 
 
@@ -49,52 +51,10 @@ This utilizes the materialize framework. -->
       <div class="row">
         <div class="container">
 
-          <div class="col s12 m4">
-            <div class="card grey lighten-2">
-              <div class="card-image">
-                <img src="photos/header-mask.png">
-                <span class="card-title">Contact Us</span>
-              </div>
-              <div class="card-content black-text">
-                <!-- <span class="card-title"><b>Contact Us</b></span> -->
-                <p><b>Our Team</b></p>
-                <p><b>Research, Innovation, and Global Solutions</b></p>
-                <p><b>globalsolutions@unc.edu</b></p>
-                <p>135 Dauer Drive</p>
-                <p>104 Rosenau Hall, CB #7415</p>
-                <p>Chapel Hill, NC 27599-7415</p>
-                <p>(919) 843-3945</p>
-              </div>
-            </div>
-
-            <div class="card grey lighten-2" >
-              <div class="card-content black-text" id="helpLinks">
-                <ul class="collection">
-                  <li class="collection-item"><a href="https://sph.unc.edu/research/research/">Research and Innovation</a></li>
-                  <li class="collection-item"><a href="https://sph.unc.edu/research/guide/">Resources for Gillings Researchers</a></li>
-                  <li class="collection-item"><a href="https://sph.unc.edu/research/maps/">Gillings Project Maps</a></li>
-                  <li class="collection-item"><a href="https://sph.unc.edu/research/innovation/">Innovation and Entrepreneurship</a></li>
-                  <li class="collection-item"><a href="https://sph.unc.edu/research/explore/">Explore our Research</a></li>
-                  <li class="collection-item"><a href="https://sph.unc.edu/research/gil/">Gillings Innovation Labs</a></li>
-                  <li class="collection-item"><a href="https://sph.unc.edu/research/explore-landing/strategic-themes/">Gillings School Strategic Themes</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="card grey lighten-2">
-              <div class="card-content black-text" id="helpLinks">
-                <span class="card-title">News Briefs</span>
-                <div class="white">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at eros eget lectus fermentum pulvinar at nec enim. Morbi quis laoreet odio. Morbi id ullamcorper massa. Integer sit amet ex dignissim, facilisis purus a, sagittis lacus. Suspendisse quis dui nec nisi mollis blandit ut sit amet nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer semper, nibh eget tincidunt rhoncus, lorem dui mattis nisi, ut vulputate quam ante sit amet ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris lorem purus, semper a ligula a, elementum bibendum lorem. Ut ac porta elit. Vivamus elit urna, dignissim quis efficitur id, gravida sit amet arcu. Nunc interdum dui justo, in venenatis ante condimentum nec. Sed ac pretium augue, nec aliquam diam. Fusce nec placerat neque. Cras et blandit sem, ac tincidunt leo.</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
 
 
 
-        <div class="col s12 m8">
+        <div class="col s12 m10 offset-m1">
           <!-- <div class="card white"> -->
             <!-- <div class="card-content black-text"> -->
               <h3>Gillings Publication Search</h3>
@@ -165,7 +125,13 @@ This utilizes the materialize framework. -->
                         <label for="search">Title</label>
                       </div>
                     </div>
-                    <div class="input-field col s12 m2"></div>
+                    <div class="input-field col s12 m2">
+                      <select>
+                        <option value="1" selected>OR</option>
+                        <option value="2">AND</option>
+                      </select>
+                      <label>Type</lable>
+                    </div>
                   </div>
 
                   </div>
@@ -244,4 +210,3 @@ This utilizes the materialize framework. -->
 
   </body>
 </html>
-

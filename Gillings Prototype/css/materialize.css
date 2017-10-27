@@ -8588,3 +8588,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     padding-bottom: 1px;
     padding-left: 10px;
 }
+
+#carolina{
+  background-color: #58A0D6;
+}
+
+.nav{
+  height: 80px;
+}
