@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- This prototype was made by Cameron Ross McCullers for use by Gillings Research.
+This utilizes the materialize framework. -->
+<html lang="en-US">
+  <head>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+      <link rel="icon" href="photos/well.jpg">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8">
+    <title>Gillings Research</title>
+  </head>
+
+  <body class="grey darken-1">
+    <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+      <script src="js/init.js"></script>
+
+      <nav class="red darken-2">
+        <div class="nav-wrapper">
+          <a href="https://sph.unc.edu/research/research/">
+            <img class="brand-logo" src="photos/logo.png" height="60px">
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="https://sph.unc.edu/research/research/">Back to Gillings</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+
+    <!-- <div class="divider"></div> -->
+
+      <div class="row">
+        <div class="container">
+        <div class="col s12 m10 offset-m1">
+          <div class="card">
+            <div class="card-content">
+
+            <div class="center-align">
+              <h2>ADMINISTRATOR PAGE</h2>
+              <div class="divider"></div>
+              <h3>Enter New Publication Data<h3>
+              <h6><strong>NOTE: PLEASE MAKE SURE YOUR ENTRY IS NOT ALREADY IN THE DATABASE</strong></h6>
+            </div>
+
+                    <div class="row">
+                    <div class="col s12 m10 offset-m1">
+                      <div class="input-field">
+                        <input id="title" type="text" class="validate">
+                        <label for="search">Title</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col s12 m10 offset-m1">
+                      <div class="input-field">
+                        <input id="authors" type="text" class="validate">
+                        <label for="search">Authors</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col s12 m10 offset-m1">
+                      <div class="input-field">
+                        <input id="abstract" type="text" class="validate">
+                        <label for="search">Abstract</label>
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="row">
+                    <div class="col s12 m10 offset-m1">
+                      <div class="input-field">
+                        <input id="keywords" type="text" class="validate">
+                        <label for="search">Keywords</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                  <div class="col s12 m10 offset-m1">
+                    <div class="input-field">
+                      <input id="title" type="text" class="validate">
+                      <label for="search">Article URL</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                <div class="col s12 m10 offset-m1">
+                  <div class="input-field">
+                    <input id="title" type="text" class="validate">
+                    <label for="search">Publication Date</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="right-align">
+              <button class="btn waves-effect waves-light red darken-2" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+
+
+          </div>
+        </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+    <footer class="page-footer blue-grey darken-4">
+      <div class="container">
+        <div class="row">
+          <div class="col l4 offset-l2 s12">
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/resource-pages/our-people-cau/">School Leadership</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/resource-pages/map-and-directions/">Maps and Directions</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/students/life-in-chapel-hill/">Life in Chapel Hill</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/resource-pages/diversity/">Diversity and Inclusion</a></li>
+            </ul>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/resource-pages/centers-institutes/">Centers, Institutes, and Affiliates</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/nciph/culture-of-health/">Culture of Health</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/resource-pages/online-programs/">Online Courses</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/emergency-information/">Emergency Information</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="row">
+          <div class="col l8 s12">
+            <p>UNC GILLINGS SCHOOL OF GLOBAL PUBLIC HEALTH | <a href="https://sph.unc.edu/feedback">CONTACT</a></p>
+            <p>170 ROSENAU HALL, CB #7400 | 135 DAUER DRIVE | CHAPEL HILL, NC 27599‑7400</p>
+          </div>
+          <div class="col l4 s12">
+            <img class="right" src="photos/unc-logo.png">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
