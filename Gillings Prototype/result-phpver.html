@@ -4,7 +4,6 @@ This utilizes the materialize framework. -->
 <html>
   <head>
       <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
       <link rel="icon" href="photos/well.jpg">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -17,10 +16,6 @@ This utilizes the materialize framework. -->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/search.js"></script>
-  <body>
-    <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
       <script src="js/init.js"></script>
 
       <nav id="carolina">
@@ -40,6 +35,7 @@ This utilizes the materialize framework. -->
 
       <div class="row">
         <div class="container">
+
         <div class="col s12 m10 offset-m1">
           <!-- <div class="card white"> -->
             <!-- <div class="card-content black-text"> -->
@@ -56,63 +52,69 @@ This utilizes the materialize framework. -->
               </div>
               <div class="collapsible-body">
 
-                <div class="row">
-                  <div class="col s12 m10">
-                    <div class="input-field">
-                      <input id="authors" type="text" class="validate">
-                      <label for="search">Authors</label>
-                    </div>
+              <div class="row">
+                <div class="col s12 m10">
+                  <div class="input-field">
+                    <input id="authors" type="text" class="validate">
+                    <label for="search">Authors</label>
                   </div>
-                  <div class="input-field col s12 m2">
-                    <select>
-                      <option value="1" selected>OR</option>
-                      <option value="2">AND</option>
-                    </select>
+                </div>
+                <div class="input-field col s12 m2">
+                  <select>
+                    <option value="1" selected>OR</option>
+                    <option value="2">AND</option>
+                  </select>
                     <label>Type</lable>
-                  </div>
                 </div>
+              </div>
 
 
-                <div class="row">
-                  <div class="col s12 m10">
-                    <div class="input-field">
-                      <input id="abstract" type="text" class="validate">
-                      <label for="search">Abstract</label>
-                    </div>
-                  </div>
-                  <div class="input-field col s12 m2">
-                    <select>
-                      <option value="1" selected>OR</option>
-                      <option value="2">AND</option>
-                    </select>
-                    <label>Type</label>
+              <div class="row">
+                <div class="col s12 m10">
+                  <div class="input-field">
+                    <input id="abstract" type="text" class="validate">
+                    <label for="search">Abstract</label>
                   </div>
                 </div>
+                <div class="input-field col s12 m2">
+                  <select>
+                    <option value="1" selected>OR</option>
+                    <option value="2">AND</option>
+                  </select>
+                  <label>Type</lable>
+                </div>
+              </div>
                 <div class="row">
-                  <div class="col s12 m10">
-                    <div class="input-field">
-                      <input id="keywords" type="text" class="validate">
-                      <label for="search">Keywords</label>
-                    </div>
-                  </div>
-                  <div class="input-field col s12 m2">
-                    <select>
-                      <option value="1" selected>OR</option>
-                      <option value="2">AND</option>
-                    </select>
-                    <label>Type</lable>
+                <div class="col s12 m10">
+                  <div class="input-field">
+                    <input id="keywords" type="text" class="validate">
+                    <label for="search">Keywords</label>
                   </div>
                 </div>
+                <div class="input-field col s12 m2">
+                  <select>
+                    <option value="1" selected>OR</option>
+                    <option value="2">AND</option>
+                  </select>
+                  <label>Type</lable>
+                </div>
+              </div>
 
                 <div class="row">
-                  <div class="col s12 m10">
-                    <div class="input-field">
-                      <input id="title" type="text" class="validate">
-                      <label for="search">Title</label>
-                    </div>
+                <div class="col s12 m10">
+                  <div class="input-field">
+                    <input id="title" type="text" class="validate">
+                    <label for="search">Title</label>
                   </div>
-                  <div class="input-field col s12 m2"></div>
                 </div>
+                <div class="input-field col s12 m2">
+                  <select>
+                    <option value="1" selected>OR</option>
+                    <option value="2">AND</option>
+                  </select>
+                  <label>Type</lable>
+                </div>
+              </div>
 
               </div>
             </li>
@@ -122,14 +124,6 @@ This utilizes the materialize framework. -->
                name="action" href="#!" onclick="visitSearchPage();"><i
                     class="material-icons right">search</i>Start Search</a>
           </div>
-              <h3>Results for "[SEARCHQUERY]"</h3>
-              <div class="input-field">
-                <input id="search" type="text" class="validate">
-                <label for="search">New Search Query</label>
-              </div>
-              <div class="row">
-                <a class="waves-effect waves-light btn right" type="submit" name="action"><i class="material-icons right">search</i>Start Search</a>
-              </div>
             <!-- </div> -->
           <!-- </div> -->
           <div class="divider"></div>
@@ -138,19 +132,17 @@ This utilizes the materialize framework. -->
             <div id="results"></div>
 
           </div>
-            <div class="center-align">
-              <ul class="pagination">
-                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                <li class="active blue"><a href="#!">1</a></li>
-                <li class="waves-effect"><a href="#!">2</a></li>
-                <li class="waves-effect"><a href="#!">3</a></li>
-                <li class="waves-effect"><a href="#!">4</a></li>
-                <li class="waves-effect"><a href="#!">5</a></li>
-                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-              </ul>
-            </div>
-
-          </div>
+          <div class="center-align">
+          <ul class="pagination" id="pageNav">
+            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+            <li class="active blue"><a href="#!">1</a></li>
+            <li class="waves-effect"><a href="#!">2</a></li>
+            <li class="waves-effect"><a href="#!">3</a></li>
+            <li class="waves-effect"><a href="#!">4</a></li>
+            <li class="waves-effect"><a href="#!">5</a></li>
+            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+          </ul>
+        </div>
 
 
         </div>
@@ -159,6 +151,7 @@ This utilizes the materialize framework. -->
 
 
       </div>
+    </div>
 
     <footer class="page-footer blue-grey darken-4">
       <div class="container">
@@ -169,10 +162,6 @@ This utilizes the materialize framework. -->
               <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/resource-pages/map-and-directions/">Maps and Directions</a></li>
               <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/students/life-in-chapel-hill/">Life in Chapel Hill</a></li>
               <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/resource-pages/diversity/">Diversity and Inclusion</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">School Leadership</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Maps and Directions</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Life in Chapel Hill</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Diversity and Inclusion</a></li>
             </ul>
           </div>
           <div class="col l4 offset-l2 s12">
@@ -181,10 +170,6 @@ This utilizes the materialize framework. -->
               <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/nciph/culture-of-health/">Culture of Health</a></li>
               <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/resource-pages/online-programs/">Online Courses</a></li>
               <li><a class="grey-text text-lighten-3" href="https://sph.unc.edu/emergency-information/">Emergency Information</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Centers, Institutes, and Affiliates</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Culture of Health</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Online Courses</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Emergency Information</a></li>
             </ul>
           </div>
         </div>
@@ -193,7 +178,6 @@ This utilizes the materialize framework. -->
         <div class="row">
           <div class="col l8 s12">
             <p>UNC GILLINGS SCHOOL OF GLOBAL PUBLIC HEALTH | <a href="https://sph.unc.edu/feedback">CONTACT</a></p>
-            <p>UNC GILLINGS SCHOOL OF GLOBAL PUBLIC HEALTH | CONTACT</p>
             <p>170 ROSENAU HALL, CB #7400 | 135 DAUER DRIVE | CHAPEL HILL, NC 27599‑7400</p>
           </div>
           <div class="col l4 s12">
